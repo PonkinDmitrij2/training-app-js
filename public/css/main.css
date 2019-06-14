@@ -1,0 +1,59 @@
+body {
+  min-height: 100vh !important;
+  background-color: whitesmoke;
+}
+
+.x-link-without-decoration,
+.hexlet-pricing-card-nav-link.active,
+.x-link-only-hover,
+.nav-link:not(.list-group-item),
+.navbar-brand,
+.cc-link,
+a.md-control {
+  border-bottom: 0px;
+}
+a {
+  transition-property: box-shadow, border-bottom, border-color, background,
+    color, fill;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-out;
+  border-bottom: 1px solid rgba(52, 73, 94, 0.3);
+}
+a {
+  color: #34495e;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.x-link-only-hover:hover {
+  box-shadow: 0 1px 0 0 currentColor;
+}
+a:hover,
+a.text-white:hover {
+  border-bottom-color: currentColor;
+}
+a:hover {
+  color: #19232d;
+  text-decoration: none;
+}
+
+/* .min-vh-100 {
+  min-height: 100vh !important;
+} */
+
+.x-shadow-fade-in {
+  transition-property: box-shadow;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-out;
+}
+
+.shadow-sm,
+.x-shadow-fade-in {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg,
+.x-shadow-fade-in:hover {
+  /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
