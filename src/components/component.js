@@ -14,17 +14,19 @@ Component.prototype.renderTo = function renderTo(containerId) {
 };
 
 Component.prototype.attachEvents = function attachEvents() {
-  const addHandlers = (element, eventType, handlers) => {
-    handlers.forEach((handler) => {
-      element.addEventListener(eventType, handler);
+  const addHandlers = (elements, eventType, handlers) => {
+    elements.forEach((element) => {
+      handlers.forEach((handler) => {
+        element.addEventListener(eventType, handler);
+      });
     });
   };
 
   Object.keys(this.events).forEach((selector) => {
-    const elem = document.querySelector(selector);
+    const elems = document.querySelectorAll(selector);
 
     Object.entries(this.events[selector]).forEach(([eventType, handlers]) => {
-      addHandlers(elem, eventType, handlers);
+      addHandlers(elems, eventType, handlers);
     });
   });
 };
